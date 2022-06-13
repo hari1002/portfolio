@@ -1241,6 +1241,14 @@ section#portfolio {
 						height: 650px;
 						margin: -390px 0 0 -480px;
 
+						@media #{$mobile} {
+							width: 300px;
+							height: 500px;
+							left: 120%;
+							margin: -300px 0 0 -480px;
+						}
+		
+
 						> img {
 							display: block;
 							width: 100%;
@@ -1259,6 +1267,11 @@ section#portfolio {
 
 			> .item_2 {
 				margin-right: 20px;
+
+				@media #{$mobile} {
+					margin-bottom: 20px;
+				}
+
 				> a {
           border-radius: 50px;
 					display: block;
@@ -1297,7 +1310,12 @@ section#portfolio {
 						height: 600px;
 						margin: -500px 0 0 -480px;
 
-
+						@media #{$mobile} {
+							width: 300px;
+							height: 500px;
+							left: 120%;
+							margin: -300px 0 0 -480px;
+						}
 						> img {
 							display: block;
 							width: 100%;
@@ -1352,6 +1370,13 @@ section#portfolio {
 						width: 500px;
 						height: 650px;
 						margin: -390px 0 0 -480px;
+
+						@media #{$mobile} {
+							width: 300px;
+							height: 500px;
+							left: 120%;
+							margin: -300px 0 0 -480px;
+						}
 
 						> img {
 							display: block;

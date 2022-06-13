@@ -1347,6 +1347,15 @@ section#portfolio > .design > .container > .item > .shadow > .lightbox {
   margin: -390px 0 0 -480px;
 }
 
+@media screen and (max-width: 640px) {
+  section#portfolio > .design > .container > .item > .shadow > .lightbox {
+    width: 300px;
+    height: 500px;
+    left: 120%;
+    margin: -300px 0 0 -480px;
+  }
+}
+
 section#portfolio > .design > .container > .item > .shadow > .lightbox > img {
   display: block;
   width: 100%;
@@ -1362,6 +1371,12 @@ section#portfolio > .design > .container > .item > .shadow > .clse {
 
 section#portfolio > .design > .container > .item_2 {
   margin-right: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  section#portfolio > .design > .container > .item_2 {
+    margin-bottom: 20px;
+  }
 }
 
 section#portfolio > .design > .container > .item_2 > a {
@@ -1405,6 +1420,15 @@ section#portfolio > .design > .container > .item_2 > .shadow > .lightbox {
   width: 500px;
   height: 600px;
   margin: -500px 0 0 -480px;
+}
+
+@media screen and (max-width: 640px) {
+  section#portfolio > .design > .container > .item_2 > .shadow > .lightbox {
+    width: 300px;
+    height: 500px;
+    left: 120%;
+    margin: -300px 0 0 -480px;
+  }
 }
 
 section#portfolio > .design > .container > .item_2 > .shadow > .lightbox > img {
@@ -1461,6 +1485,15 @@ section#portfolio > .design > .container > .item_3 > .shadow > .lightbox {
   width: 500px;
   height: 650px;
   margin: -390px 0 0 -480px;
+}
+
+@media screen and (max-width: 640px) {
+  section#portfolio > .design > .container > .item_3 > .shadow > .lightbox {
+    width: 300px;
+    height: 500px;
+    left: 120%;
+    margin: -300px 0 0 -480px;
+  }
 }
 
 section#portfolio > .design > .container > .item_3 > .shadow > .lightbox > img {
