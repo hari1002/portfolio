@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sunflower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
 @-webkit-keyframes mousewheel {
   0% {
     top: 5px;
@@ -31,17 +32,39 @@
   }
 }
 
+@-webkit-keyframes target_image {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes target_image {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
 #wrap {
   position: relative;
   min-width: 1200px;
-  /* >h1{
-    position: absolute;
-    left: 50%;
-    // top: 160px;
-    color: #fff;
-    font-size: 24px;
-    z-index: 100;
-  } */
 }
 
 @media screen and (max-width: 640px) {
@@ -73,18 +96,16 @@
 
 #home {
   position: relative;
-  /* background-color: #FEBEB1;
-  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 100%, rgba(#FEBEB1, 0)); */
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffcad4+2,febeb1+50,ffffff+100 */
-  background: #ffcad4;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8f8af7+0,b4b2f4+45,ffffff+100 */
+  background: #8f8af7;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #ffcad4), color-stop(50%, #febeb1), to(white));
-  background: linear-gradient(to bottom, #ffcad4 2%, #febeb1 50%, white 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#8f8af7), color-stop(45%, #b4b2f4), to(white));
+  background: linear-gradient(to bottom, #8f8af7 0%, #b4b2f4 45%, white 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcad4', endColorstr='#ffffff', GradientType=0 );
-  /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8af7', endColorstr='#ffffff',GradientType=0 );
+  /*IE6-9*/
 }
 
 #home > .intro {
@@ -102,64 +123,89 @@
   }
 }
 
-#home > .intro > .text {
-  position: relative;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 @media screen and (max-width: 640px) {
-  #home > .intro > .text {
+  #home > .intro {
     min-width: 100%;
   }
 }
 
-#home > .intro > .text > h1 {
-  width: 80%;
+#home > .intro > h1 {
   font-family: 'Black Han Sans', sans-serif;
-  font-size: 100px;
-  font-weight: bold;
-  text-align: center;
-  color: #ff775f;
+  font-size: 90px;
   letter-spacing: 10px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  color: #ef8cc9;
   position: absolute;
   left: 50%;
-  margin-top: -100px;
-  padding: 10px;
+  margin-top: -5%;
 }
 
 @media screen and (max-width: 640px) {
-  #home > .intro > .text > h1 {
-    margin-top: 10px;
+  #home > .intro > h1 {
     font-size: 50px;
   }
 }
 
-#home > .intro > .text > h2 {
+#home > .intro > h2 {
   color: #fff;
   text-align: center;
   font-family: 'Do Hyeon', sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 300;
   position: absolute;
-  bottom: -30px;
-  transition: 1s;
-  -webkit-transition: 1s;
-  -ms-transition: 1s;
-  opacity: 0.8;
+  bottom: -10px;
   width: 100%;
 }
 
 @media screen and (max-width: 640px) {
-  #home > .intro > .text > h2 {
-    top: 100px;
-    font-size: 45px;
+  #home > .intro > h2 {
+    top: 70px;
+    font-size: 40px;
   }
+}
+
+#home > .intro h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 200px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Nanum Gothic Coding', monospace;
+  color: #9594b7;
+}
+
+@media screen and (max-width: 640px) {
+  #home > .intro h3 {
+    position: absolute;
+    top: 120px;
+    width: 260px;
+  }
+}
+
+#home > .intro > span {
+  position: absolute;
+  display: block;
+  right: 32%;
+  top: 180px;
+}
+
+@media screen and (max-width: 640px) {
+  #home > .intro > span {
+    position: absolute;
+    top: 350px;
+    left: 35%;
+  }
+}
+
+#home > .intro > span > .hand {
+  width: 30px;
+  height: 30px;
+  -webkit-animation: target_image 2s;
+          animation: target_image 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 #home > .mouse {
@@ -169,7 +215,7 @@
   width: 30px;
   height: 50px;
   margin-left: -15px;
-  border: 2px solid #da8faa;
+  border: 2px solid #b0acfb;
   border-radius: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -188,7 +234,7 @@
   width: 4px;
   height: 10px;
   margin-left: -2px;
-  background-color: #da8faa;
+  background-color: #b0acfb;
   border-radius: 2px;
   text-indent: -9999px;
   -webkit-animation: mousewheel 1s linear infinite;
@@ -226,7 +272,7 @@ header:after {
   bottom: 1px;
   width: 90%;
   height: 2px;
-  border-bottom: 1px solid #efc0b4;
+  border-bottom: 1px solid #8F8AF7;
   content: '';
 }
 
@@ -377,47 +423,37 @@ header ~ section {
 
 header ~ section > h2 {
   margin-bottom: 72px;
-  color: #ff775f;
+  color: #ef8cc9;
   font-size: 50px;
   font-family: 'Do Hyeon', sans-serif;
   line-height: 50px;
   text-align: center;
-  /* 
-    &:after{
-      display: block;
-      width: 138px;
-      height: 15px;
-      margin: 30px auto 0;
-      background-image: url(./../images/deco_tit.png);
-      content: '';
-    } */
-}
-
-section#aboutme {
-  background-color: #fff;
-  background-image: url(./../images/aboutme/peachflower.png);
-  background-repeat: no-repeat;
 }
 
 section#aboutme > .container {
+  background-color: #F6F6FD;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: nowrap;
       flex-flow: nowrap;
-  padding-bottom: 30px;
-  padding-left: 250px;
+  margin: 0 auto;
+  width: 1200px;
+  height: 650px;
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 640px) {
   section#aboutme > .container {
+    width: 480px;
+    height: 500px;
     display: block;
-    padding-bottom: 0;
-    padding-left: 0;
   }
 }
 
 section#aboutme > .container > .profile {
+  margin-top: 20px;
   width: 33.33333%;
 }
 
@@ -430,6 +466,7 @@ section#aboutme > .container > .profile {
 section#aboutme > .container > .profile > div {
   position: relative;
   width: 360px;
+  height: 600px;
   margin: 0 auto;
 }
 
@@ -439,21 +476,11 @@ section#aboutme > .container > .profile > div {
   }
 }
 
-section#aboutme > .container > .profile > div:after {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 20px;
-  border-bottom: 1px solid #eee;
-  border-radius: 0 0 10px 10px;
-  content: '';
-}
-
 section#aboutme > .container > .profile > div > .myphoto {
-  height: 400px;
-  border-radius: 200px;
+  margin: 10px auto;
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
   overflow: hidden;
   background-image: url(./../images/aboutme/aboutmeVisual01.png);
   background-position: center bottom;
@@ -462,41 +489,50 @@ section#aboutme > .container > .profile > div > .myphoto {
 }
 
 section#aboutme > .container > .profile > div > .myphoto > img {
+  width: 250px;
   display: block;
   position: relative;
   z-index: -1;
   margin-left: -370px;
 }
 
+section#aboutme > .container > .profile > div > p {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
 section#aboutme > .container > .profile > div > ol {
-  padding: 0 20px;
+  margin: 50px 0 0 20px;
 }
 
 section#aboutme > .container > .profile > div > ol > li {
-  height: 45px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 45px;
-  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
-section#aboutme > .container > .profile > div > ol > li:last-child {
-  border-bottom: 0;
+@media screen and (max-width: 640px) {
+  section#aboutme > .container > .profile > div > ol {
+    margin-left: 20%;
+  }
 }
 
 section#aboutme > .container > .biography {
   width: 60%;
+  margin-left: 30px;
 }
 
 @media screen and (max-width: 640px) {
   section#aboutme > .container > .biography {
     width: 100%;
-    margin-top: 48px;
+    margin: 0 auto;
   }
 }
 
 section#aboutme > .container > .biography > .detail {
-  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 600px;
   height: 300px;
   margin-top: 50px;
@@ -507,34 +543,59 @@ section#aboutme > .container > .biography > .detail {
 
 @media screen and (max-width: 640px) {
   section#aboutme > .container > .biography > .detail {
-    width: 400px;
-    margin-left: 5%;
-    margin-bottom: 100px;
+    display: block;
+    margin-top: -70px;
+    width: 300px;
+    margin-bottom: 300px;
   }
 }
 
-section#aboutme > .container > .biography > .detail > h3 {
+section#aboutme > .container > .biography > .detail > .left {
+  margin-right: 65px;
+}
+
+@media screen and (max-width: 640px) {
+  section#aboutme > .container > .biography > .detail > .left {
+    margin-bottom: 100px;
+    width: 300px;
+  }
+}
+
+section#aboutme > .container > .biography > .detail > .left > h3 {
   margin-bottom: 30px;
   font-size: 24px;
 }
 
-section#aboutme > .container > .biography > .detail > p {
-  margin-bottom: 20px;
+section#aboutme > .container > .biography > .detail > .left > ol > li {
+  width: 220px;
+  height: 30px;
   font-size: 14px;
-  font-weight: 300;
+  line-height: 30px;
 }
 
 @media screen and (max-width: 640px) {
-  section#aboutme > .container > .biography > .detail > p > br {
-    display: none;
+  section#aboutme > .container > .biography > .detail > .right {
+    width: 300px;
   }
+}
+
+section#aboutme > .container > .biography > .detail > .right > h3 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+section#aboutme > .container > .biography > .detail > .right > ol > li {
+  width: 450px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
 }
 
 section#aboutme > .container > .biography > .detail_2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -30px;
+  margin-top: -90px;
   margin-bottom: 64px;
   padding-left: 10%;
 }
@@ -609,12 +670,6 @@ section#aboutme > .container > .biography > .detail_2 > .inner_right > .lic > li
   height: 30px;
   font-size: 14px;
   line-height: 30px;
-}
-
-section#aboutme > .container > .biography > .detail_2 > .inner_right > .lic > li:nth-child(1) {
-  height: 15px;
-  line-height: 15px;
-  margin-bottom: 20px;
 }
 
 section#aboutme > .container > .biography > .detail_2 > .inner_right > .lic > li:before {
@@ -778,8 +833,19 @@ section#aboutme > .talk > ul > li > p {
   text-align: center;
 }
 
+section#skill {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fdcbf1), color-stop(1%, #fdcbf1), to(#e6dee9));
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+
+@media screen and (max-width: 640px) {
+  section#skill {
+    margin-top: 1200px;
+  }
+}
+
 section#skill > h2 {
-  color: #ff775f;
+  color: #ef8cc9;
 }
 
 section#skill > .ability-container {
@@ -852,7 +918,7 @@ section#skill > .ability-container > .stick > .stick-container > .item .progress
   height: 100%;
   /* width: 100px; js에서 동적으로 할당 */
   width: 0;
-  background-color: #cab4d9;
+  background-color: #8F8AF7;
   -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
 }
@@ -1029,13 +1095,13 @@ section#portfolio > .slides > .slides-pagination > li > a {
 }
 
 section#portfolio > .slides > .slides-pagination > li > a:hover {
-  color: #000;
-  background-color: #f3ccd4;
+  color: #fff;
+  background-color: #8F8AF7;
 }
 
 section#portfolio > .slides > .slides-pagination > li.on > a {
-  color: #000;
-  background-color: #f3ccd4;
+  color: #fff;
+  background-color: #8F8AF7;
 }
 
 section#portfolio > .slides > .slides-container {
@@ -1173,8 +1239,8 @@ section#portfolio > .slides > .slides-container > figure > figcaption > .btn > a
 }
 
 section#portfolio > .slides > .slides-container > figure > figcaption > .btn > a:hover {
-  color: #000;
-  background-color: #eacdd4;
+  color: #fff;
+  background-color: #8F8AF7;
 }
 
 section#portfolio > .slides > .slides-container > figure > figcaption > .shadow {
@@ -1512,119 +1578,110 @@ section#portfolio > .design > .container > .item_3 > .shadow > .clse {
 section#contact {
   width: 100%;
   margin: 0 auto 50px;
-  background-image: url(./../images/contact/contact.png);
-  background-size: cover;
-  background-position: 210px center;
 }
 
-@media screen and (max-width: 640px) {
-  section#contact {
-    width: 100%;
-    padding-bottom: 100px;
-    background-position: -145px center;
-  }
-}
-
-section#contact > .resume {
-  padding-bottom: 130px;
-}
-
-@media screen and (max-width: 640px) {
-  section#contact > .resume {
-    padding-bottom: 0;
-  }
-}
-
-section#contact > .resume > div {
-  padding: 0 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 640px) {
-  section#contact > .resume > div {
-    display: block;
-  }
-}
-
-section#contact > .resume > div > .iam {
-  text-align: center;
-}
-
-section#contact > .resume > div > .iam > p {
-  line-height: 26px;
-}
-
-section#contact > .resume > div > .iam > p > span {
-  display: block;
-}
-
-@media screen and (max-width: 640px) {
-  section#contact > .resume > div > .iam > p > span {
-    display: inline;
-    text-align: center;
-    margin-top: -120px;
-  }
-}
-
-section#contact > .resume > div > .iam > .me {
-  margin-top: 30px;
-}
-
-section#contact > .resume > div > .iam > a {
+section#contact > .close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  height: 220px;
   margin: 0 auto;
-  margin-top: 30px;
-  display: block;
-  width: 260px;
-  height: 40px;
-  color: #fff;
-  line-height: 40px;
-  letter-spacing: 1px;
-  text-align: center;
-  background-color: #222;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 640px) {
-  section#contact > .resume > div > .iam > a {
-    display: none;
+  section#contact > .close {
+    display: block;
+    width: 400px;
   }
 }
 
-section#contact > .resume > div > .iam > .shadow {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  /* opacity: 0.75; */
+section#contact > .close > .end {
+  font-size: 18px;
+  margin-right: 160px;
 }
 
-section#contact > .resume > div > .iam > .shadow > .lightbox {
+@media screen and (max-width: 640px) {
+  section#contact > .close > .end {
+    font-size: 16px;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section#contact > .close > .end > span {
+    display: block;
+    width: 400px;
+  }
+}
+
+section#contact > .close > .info {
+  position: relative;
+}
+
+@media screen and (max-width: 640px) {
+  section#contact > .close > .info {
+    padding-top: 50px;
+    position: absolute;
+    left: 33%;
+  }
+}
+
+section#contact > .close > .info > ol > li {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+section#contact > .close > .info > span {
   display: block;
-  overflow-y: scroll;
+  width: 30px;
+  height: 30px;
+}
+
+section#contact > .close > .info > span > img {
+  display: block;
+}
+
+section#contact > .close > .info > span > img:nth-child(1) {
   position: absolute;
-  left: 55%;
-  top: 60%;
-  width: 800px;
-  height: 600px;
-  margin: -390px 0 0 -480px;
+  top: -3px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
 }
 
-section#contact > .resume > div > .iam > .shadow > .lightbox > img {
-  display: block;
-  width: 100%;
+@media screen and (max-width: 640px) {
+  section#contact > .close > .info > span > img:nth-child(1) {
+    top: 50px;
+  }
 }
 
-section#contact > .resume > div > .iam > .shadow > .clse {
-  display: block;
+section#contact > .close > .info > span > img:nth-child(2) {
   position: absolute;
-  left: 40%;
-  top: 50%;
-  margin: 370px 0 0 410px;
+  top: 50px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 640px) {
+  section#contact > .close > .info > span > img:nth-child(2) {
+    top: 100px;
+  }
+}
+
+section#contact > p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 640px) {
+  section#contact > p {
+    font-size: 14px;
+    margin-top: 100px;
+  }
 }
 
 footer {
@@ -1638,7 +1695,7 @@ footer {
 }
 
 footer > .info {
-  background-color: #f3ccd4;
+  background-color: #c3c0f3;
 }
 
 footer > .info > .container {

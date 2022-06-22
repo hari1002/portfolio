@@ -271,8 +271,8 @@ $(function(){
 				//your configuration goes here
 				easing: 'easeInOutCubic',
 				delay: 3000,
-				barColor:'#CAB4D9',
-				trackColor:'#3a4149',
+				barColor:'#8F8AF7',
+				trackColor:'##8F8AF7',
 				scaleColor: false,
 				lineWidth: 8,
 				size: 140,

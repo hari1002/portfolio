@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sunflower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 
 @keyframes mousewheel {
 	0% {
@@ -18,6 +19,17 @@
 		opacity: 0;
 	}
 }
+
+@keyframes target_image {
+
+	0% { transform: rotate(-10deg); }
+	
+	50% { transform: rotate(25deg) }
+	
+	100% { transform: rotate(-10deg); }
+	
+	}
+
 
 //변수선언
 $pri-color: #febeb1; //살구색
@@ -56,46 +68,18 @@ $mobile: "screen and (max-width:640px)";
 		}
 	}
 
-	/* >h1{
-    position: absolute;
-    left: 50%;
-    // top: 160px;
-    color: #fff;
-    font-size: 24px;
-    z-index: 100;
-  } */
 }
 
 #home {
 	position: relative;
 	//height: 500px; js에서 동적으로 설정
-	/* background-color: #FEBEB1;
-  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 100%, rgba(#FEBEB1, 0)); */
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffcad4+2,febeb1+50,ffffff+100 */
-	background: rgb(255, 202, 212); /* Old browsers */
-	background: -moz-linear-gradient(
-		top,
-		rgba(255, 202, 212, 1) 2%,
-		rgba(254, 190, 177, 1) 50%,
-		rgba(255, 255, 255, 1) 100%
-	); /* FF3.6-15 */
-	background: -webkit-linear-gradient(
-		top,
-		rgba(255, 202, 212, 1) 2%,
-		rgba(254, 190, 177, 1) 50%,
-		rgba(255, 255, 255, 1) 100%
-	); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(
-		to bottom,
-		rgba(255, 202, 212, 1) 2%,
-		rgba(254, 190, 177, 1) 50%,
-		rgba(255, 255, 255, 1) 100%
-	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(
-			startColorstr='#ffcad4',
-			endColorstr='#ffffff',
-			GradientType=0
-		); /* IE6-9 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8f8af7+0,b4b2f4+45,ffffff+100 */
+background: rgb(143,138,247); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(143,138,247,1) 0%, rgba(180,178,244,1) 45%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(143,138,247,1) 0%,rgba(180,178,244,1) 45%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(143,138,247,1) 0%,rgba(180,178,244,1) 45%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8af7', endColorstr='#ffffff',GradientType=0 ); /*IE6-9*/
+
 
 	> .intro {
 		position: absolute;
@@ -107,37 +91,24 @@ $mobile: "screen and (max-width:640px)";
 		@media #{$mobile} {
 			top: 25%;
 			padding-bottom: 30px;
+			
 		}
-
-		> .text {
-			position: relative;
-			z-index: 2;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
 
 			@media #{$mobile} {
 				min-width: 100%;
 			}
 
 			> h1 {
-				width: 80%;
 				font-family: 'Black Han Sans', sans-serif;
-				font-size: 100px;
-				font-weight: bold;
-				text-align: center;
-				color: #ff775f;
+				font-size: 90px;
 				letter-spacing: 10px;
-				transition: 1s;
-
+				color: #ef8cc9;
 				position: absolute;
 				left: 50%;
-				margin-top: -100px;
+				margin-top: -5%;				
 
-				padding: 10px;
 
 				@media #{$mobile} {
-					margin-top: 10px;
 					font-size: 50px;
 				}
 			} //end of h1
@@ -146,23 +117,57 @@ $mobile: "screen and (max-width:640px)";
 				color: #fff;
 				text-align: center;
 				font-family: 'Do Hyeon', sans-serif;
-				font-size: 80px;
+				font-size: 60px;
 				font-weight: 300;
 				position: absolute;
-				bottom: -30px;
-
-				transition: 1s;
-				-webkit-transition: 1s;
-				-ms-transition: 1s;
-				opacity: 0.8;
+				bottom: -10px;
 				width: 100%;
 
 				@media #{$mobile} {
-					top: 100px;
-					font-size: 45px;
+					top: 70px;
+					font-size: 40px;
 				}
 			}
-		} //end of .text
+
+			h3 {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				margin-top: 200px;
+				font-size: 13px;
+				font-weight: 500;
+				font-family: 'Nanum Gothic Coding', monospace;
+				color: #9594b7;
+
+					@media #{$mobile} {
+						position: absolute;
+						top: 120px;
+						width: 260px;
+					}
+			
+			}
+
+			>span{
+				position: absolute;
+				display: block;
+				right: 32%;
+				top: 180px;
+
+				@media #{$mobile} {
+					position: absolute;
+					top: 350px;
+					left: 35%;
+				}
+				
+				>.hand{
+					width: 30px;
+					height: 30px;
+					animation: target_image 2s; 
+					animation-iteration-count: infinite;
+				}
+			}
+
 	} //end of .intro
 
 	> .mouse {
@@ -172,7 +177,7 @@ $mobile: "screen and (max-width:640px)";
 		width: 30px;
 		height: 50px;
 		margin-left: -15px;
-		border: 2px solid #da8faa;
+		border: 2px solid #b0acfb;
 		border-radius: 15px;
 		box-sizing: border-box;
 
@@ -187,7 +192,7 @@ $mobile: "screen and (max-width:640px)";
 			width: 4px;
 			height: 10px;
 			margin-left: -2px;
-			background-color: #da8faa;
+			background-color: #b0acfb;
 			border-radius: 2px;
 			text-indent: -9999px;
 
@@ -225,7 +230,7 @@ header {
 		bottom: 1px;
 		width: 90%;
 		height: 2px;
-		border-bottom: 1px solid #efc0b4;
+		border-bottom: 1px solid #8F8AF7;
 		content: '';
 	}
 
@@ -356,40 +361,36 @@ header ~ section {
 
 	> h2 {
 		margin-bottom: 72px;
-		color: $point-color;
+		color: #ef8cc9;
 		font-size: 50px;
 		font-family: 'Do Hyeon', sans-serif;
 		line-height: 50px;
 		text-align: center;
-		/* 
-    &:after{
-      display: block;
-      width: 138px;
-      height: 15px;
-      margin: 30px auto 0;
-      background-image: url(./../images/deco_tit.png);
-      content: '';
-    } */
 	} //end of h2
 } //end of header~section
 
 section#aboutme {
-	background-color: #fff;
-	background-image: url(./../images/aboutme/peachflower.png);
-	background-repeat: no-repeat;
+
 	> .container {
+		background-color: #F6F6FD;
+		border-radius: 20px;
 		display: flex;
 		flex-flow: nowrap;
-		padding-bottom: 30px;
-		padding-left: 250px;
+		margin: 0 auto;
+		width: 1200px;
+		height: 650px;
+		margin-bottom: 100px;
+
 
 		@media #{$mobile} {
+			width: 480px;
+			height: 500px;
 			display: block;
-			padding-bottom: 0;
-			padding-left: 0;
+			
 		}
 
 		> .profile {
+			margin-top: 20px;
 			width: 33.33333%;
 
 			@media #{$mobile} {
@@ -399,27 +400,19 @@ section#aboutme {
 			> div {
 				position: relative;
 				width: 360px;
+				height: 600px;
 				margin: 0 auto;
 
 				@media #{$mobile} {
 					width: 95%;
 				}
 
-				&:after {
-					display: block;
-					position: absolute;
-					left: 0;
-					bottom: -3px;
-					width: 100%;
-					height: 20px;
-					border-bottom: 1px solid #eee;
-					border-radius: 0 0 10px 10px;
-					content: '';
-				}
-
+	
 				> .myphoto {
-					height: 400px;
-					border-radius: 200px;
+					margin: 10px auto;
+					border-radius: 100px;
+					height: 200px;
+					width: 200px;
 					overflow: hidden;
 					background-image: url(./../images/aboutme/aboutmeVisual01.png);
 					background-position: center bottom;
@@ -427,6 +420,7 @@ section#aboutme {
 					background-repeat: no-repeat;
 
 					> img {
+						width: 250px;
 						display: block;
 						position: relative;
 						z-index: -1; //-1값 설정시 가장 아래 바닥으로 깔린다.
@@ -434,33 +428,40 @@ section#aboutme {
 					}
 				} //end of .myphoto
 
-				> ol {
-					padding: 0 20px;
-					> li {
-						height: 45px;
-						font-weight: 400;
-						font-size: 16px;
-						line-height: 45px;
-						border-bottom: 1px solid #eee;
+				>p{
+					text-align: center;
+					margin-top: 30px;
+					font-size: 18px;
+				}
 
-						&:last-child {
-							border-bottom: 0;
-						}
+				>ol{
+					margin: 50px 0 0 20px;
+
+					>li{
+						font-size: 14px;
+						margin-bottom: 15px;
 					}
-				} //end of ol
+
+					@media #{$mobile} {
+					margin-left: 20%;
+					}
+				}
+				
+			
 			} //end of div
 		} //end of .profile
 
 		> .biography {
 			width: 60%;
+			margin-left: 30px;
 
 			@media #{$mobile} {
-				width: 100%;
-				margin-top: 48px;
+				width: 100%;				
+				margin: 0 auto;
 			}
 
 			> .detail {
-				background-color: #fff;
+				display: flex;
 				width: 600px;
 				height: 300px;
 				margin-top: 50px;
@@ -469,32 +470,63 @@ section#aboutme {
 				padding-left: 20px;
 
 				@media #{$mobile} {
-					width: 400px;
-					margin-left: 5%;
-					margin-bottom: 100px;
+					display: block;
+					margin-top: -70px;
+					width: 300px;
+					margin-bottom: 300px;
+					
 				}
 
-				> h3 {
-					margin-bottom: 30px;
-					font-size: 24px;
-				} //end of h3
+		
+				>.left{
+					margin-right: 65px;
 
-				> p {
-					margin-bottom: 20px;
-					font-size: 14px;
-					font-weight: 300;
+					@media #{$mobile} {
+						margin-bottom: 100px;
+						width: 300px;
+					}
+					>h3{
+						margin-bottom: 30px;
+						font-size: 24px;
+					}
 
-					> br {
-						@media #{$mobile} {
-							display: none;
+					>ol{
+
+						>li{
+							width: 220px;
+							height: 30px;
+							font-size: 14px;
+							line-height: 30px;
 						}
 					}
-				} //end of p
+				}//end of .left
+
+				>.right{
+					@media #{$mobile} {
+						width: 300px;
+						
+					}
+					>h3{
+						margin-bottom: 30px;
+						font-size: 24px;
+					}
+
+					>ol{
+
+						>li{
+							width: 450px;
+							height: 30px;
+							font-size: 14px;
+							line-height: 30px;
+						}
+					}
+				}
+
 			} //end of .detail
 
 			> .detail_2 {
 				display: flex;
-				margin-top: -30px;
+				margin-top: -90px;
 				margin-bottom: 64px;
 				padding-left: 10%;
 
@@ -563,12 +595,6 @@ section#aboutme {
 							height: 30px;
 							font-size: 14px;
 							line-height: 30px;
-
-							&:nth-child(1) {
-								height: 15px;
-								line-height: 15px;
-								margin-bottom: 20px;
-							}
 
 							&:before {
 								margin-right: 10px;
@@ -750,9 +776,13 @@ section#aboutme {
 section#skill {
 	//margin-top: 100px;
 	// padding-top: 70px;
+	background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 
+	@media #{$mobile} {
+	margin-top: 1200px;
+	}
 	> h2 {
-		color: $point-color;
+		color: #ef8cc9;
 	}
 
 	> .ability-container {
@@ -808,7 +838,7 @@ section#skill {
 							height: 100%;
 							/* width: 100px; js에서 동적으로 할당 */
 							width: 0;
-							background-color: #cab4d9;
+							background-color: #8F8AF7;
 							transition: all 2s ease-in-out;
 
 							> span {
@@ -958,8 +988,8 @@ section#portfolio {
 					}
 
 					&:hover {
-						color: #000;
-						background-color: #f3ccd4;
+						color: #fff;
+						background-color: #8F8AF7;
 
 						@media #{$mobile} {
 						}
@@ -967,8 +997,8 @@ section#portfolio {
 				}
 
 				&.on > a {
-					color: #000;
-					background-color: #f3ccd4;
+					color: #fff;
+					background-color: #8F8AF7;
 
 					@media #{$mobile} {
 					}
@@ -1081,8 +1111,8 @@ section#portfolio {
 							}
 
 							&:hover {
-								color: #000;
-								background-color: #eacdd4;
+								color: #fff;
+								background-color: #8F8AF7;
 							}
 						} //a
 					} //.btn
@@ -1399,108 +1429,103 @@ section#portfolio {
 } //end of #portfolio
 
 section#contact {
-	//width: 1200px;
 	width: 100%;
 	margin: 0 auto 50px;
-	background-image: url(./../images/contact/contact.png);
-	background-size: cover;
-	background-position: 210px center;
 
 	@media #{$mobile} {
-		width: 100%;
-		padding-bottom: 100px;
-		background-position: -145px center;
+
 	}
-	> .resume {
-		//padding: 50px 0;
-		padding-bottom: 130px;
+
+	>.close{
+		display: flex;
+		width: 1000px;
+		height: 220px;
+		margin: 0 auto;
+		margin-top: 100px;
+
 		@media #{$mobile} {
-			padding-bottom: 0;
+		display: block;
+		width: 400px;
+
 		}
 
-		> div {
-			padding: 0 30px;
-			justify-content: center;
+		>.end{
+			font-size: 18px;
+			margin-right: 160px;
 
 			@media #{$mobile} {
-				display: block;
+				font-size: 16px;
+				width: 500px;
+				
 			}
 
-			> .iam {
-				text-align: center;
-				> p {
-					line-height: 26px;
-
-					> span {
-						display: block;
-
-						@media #{$mobile} {
-							display: inline;
-							text-align: center;
-							margin-top: -120px;
-						}
-					}
-				}
-				> .me {
-					margin-top: 30px;
-				}
-
-				> a {
-					margin: 0 auto;
-					margin-top: 30px;
+			>span{
+				@media #{$mobile} {
 					display: block;
-					width: 260px;
-					height: 40px;
-					color: #fff;
-					line-height: 40px;
-					letter-spacing: 1px;
-					text-align: center;
-					background-color: #222;
+					width: 400px;
+				}
+			}
+		}
 
-					@media #{$mobile} {
-						//margin: 30px auto;
-						display: none;
+
+		>.info{
+			position: relative;
+
+			@media #{$mobile} {
+				padding-top: 50px;
+				position: absolute;
+				left: 33%;
+			}
+			>ol{
+				>li{
+					font-size: 16px;
+					margin-bottom: 30px;
+
+				}
+			}
+			>span{
+				display: block;
+				width: 30px;
+				height: 30px;
+				>img{
+					display: block;
+
+					&:nth-child(1){
+						position: absolute;
+						top: -3px;
+						left: -40px;
+						width: 30px;
+						height: 30px;
+						@media #{$mobile} {
+							top: 50px;
+						}
+					}
+
+					&:nth-child(2){
+						position: absolute;
+						top: 50px;
+						left: -40px;
+						width: 30px;
+						height: 30px;
+						@media #{$mobile} {
+							top: 100px;
+						}
 					}
 				}
+			}
+		}//end of .info
+	}//end of .close
 
-				> .shadow {
-					display: none;
-					position: fixed;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					background-color: rgba(0, 0, 0, 0.5);
-					z-index: 1000;
-					/* opacity: 0.75; */
+	>p{
+		text-align: center;
+		font-size: 16px;
+		margin-bottom: 100px;
 
-					> .lightbox {
-						display: block;
-						overflow-y: scroll;
-						position: absolute;
-						left: 55%;
-						top: 60%;
-						width: 800px;
-						height: 600px;
-						margin: -390px 0 0 -480px;
-
-						> img {
-							display: block;
-							width: 100%;
-						}
-					} //end of .lightbox
-
-					> .clse {
-						display: block;
-						position: absolute;
-						left: 40%;
-						top: 50%;
-						margin: 370px 0 0 410px;
-					}
-				} //end of .shadow
-			} //end of .iam
-		} //end of div
-	} //end of resume
+		@media #{$mobile} {
+		font-size: 14px;
+		margin-top: 100px;
+		}
+	}
 } //end of #contact
 
 footer {
@@ -1511,7 +1536,7 @@ footer {
 	}
 
 	> .info {
-		background-color: #f3ccd4;
+		background-color: #c3c0f3;
 
 		> .container {
 			text-align: center;
